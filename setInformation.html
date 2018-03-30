@@ -1,0 +1,521 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>修改作品</title>
+	<script type="text/javascript" src="js/login.js"></script>
+</head>
+<body background="img/背景.jpg">
+		<table align="center" width="1200">
+			<tr>
+				<td align="left">
+					<font size="7" color="#0099CC" face="黑体">辉哥的烦恼影视</font>
+				</td>
+				<td align="right">
+					帐号：<input type="text" name="txtUserName" size="15" maxlength="20" >
+					<br>
+					密码：<input type="password" name="txtPwd" size="15" maxlength="20">
+					<br>
+					<input type="radio" name="rdoActor" value="0" >管理员
+					<input type="radio" name="rdoActor" value="1" >用户
+					<br>
+					<input type="submit" name="btnLogin" value="登录"  onclick="Log()">
+					<a href="login.html">
+						<input type="button" name="btnRegister" value="注册" onclick="login.html" >
+					</a>
+				</td>
+			</tr>
+		</table>
+		<hr>
+		<table align="center" width="1000" >
+			<tr>
+				<td>
+					<font size="6"><a href="index.html"  style="text-decoration:none">首页</a></font>
+				</td>
+				<td>
+					<font size="6"><a href="movie.html"  style="text-decoration:none">电影</a></font>
+				</td>
+				<td>
+					<font size="6"><a href="tvDrama.html"  style="text-decoration:none">电视剧</a></font>
+				</td>
+				<td>
+					<font size="6"><a href="tvShow.html"  style="text-decoration:none">综艺</a></font>
+				</td>
+				<td>
+					<font size="6"><a href="animation.html"  style="text-decoration:none">动漫</a></font>
+				</td>
+				<td>
+					<font size="6"><a href="billboard.html"  style="text-decoration:none">排行榜</a></font>
+				</td>
+				<td>
+					<input type="text" name="txtSel" size="15" maxlength="20">
+					<font size="3"><a href="information.html"  style="text-decoration:none">查询</a></font>
+				</td>
+				<td>
+					<font size="3"><a href="addInformation.html"  style="text-decoration:none">添加</a></font>
+				</td>
+				<td>
+					<font size="3"><a href="selectInformation.html"  style="text-decoration:none">删改</a></font>
+				</td>
+			</tr>
+		</table>
+		<hr>
+	<div align="center">
+		<font size="6" color="#0099CC" face="黑体">辉哥的烦恼影视管理系统</font>
+		<br><br>
+		<font size="6" color="#FF6633" face="黑体">电影详情</font>
+		<br><br>
+	</div>
+	<form>
+		<table align="center">
+			<tr>
+				<td>片名：</td>
+				<td>
+					<input type="text" name="txtName" size="40" maxlength="40" value="英雄本色"/>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>导演：</td>
+				<td>
+					<input type="text" name="txtDirect" size="40" maxlength="40" value="吴宇森"/>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>编剧：</td>
+				<td>
+					<input type="text" name="txtScript" size="40" maxlength="40" value="陈庆嘉/吴宇森/梁淑华"/>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>主演：</td>
+				<td>
+					<input type="text" name="txtScript" size="40" maxlength="40" value="周润发/狄龙/张国荣"/>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>类型：</td>
+				<td>
+					<input type="checkbox" name="chkType" value="1"/>爱情
+					<input type="checkbox" name="chkType" value="2"/>喜剧
+					<input type="checkbox" name="chkType" value="3"/>科幻
+					<input type="checkbox" name="chkType" value="4"/>战争
+					<input type="checkbox" name="chkType" value="5" checked="checked"/>动作
+					<br>
+					<input type="checkbox" name="chkType" value="6"/>剧情
+					<input type="checkbox" name="chkType" value="7"/>恐怖
+					<input type="checkbox" name="chkType" value="8"/>动画
+					<input type="checkbox" name="chkType" value="9"/>悬疑		
+				</td>
+			</tr>
+			<tr>
+				<td>制片国家/地区：</td>
+				<td>
+					<input type="text" name="txtArea" size="20" maxlength="20" value="香港"/>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>语言：</td>
+				<td>
+					<input type="radio" name="rdoLanguage" value="1"/>普通话
+					<input type="radio" name="rdoLanguage" value="2"/>英语
+					<input type="radio" name="rdoLanguage" value="3"/>法语
+					<input type="radio" name="rdoLanguage" value="4"/>日语
+					<input type="radio" name="rdoLanguage" value="5"/>韩语
+					<input type="radio" name="rdoLanguage" value="6"/>粤语
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>上映日期：</td>
+				<td>
+					<input type="text" name="txtYear" size="4" maxlength="4"/ value="1986">年
+					<input type="text" name="txtMonth" size="2" maxlength="2" value="08"/>月
+					<input type="text" name="txtDay" size="2" maxlength="2" value="02"/>日
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>上传图片：</td>
+				<td>
+					<img src="img/英雄本色.jpg" width="200"/>
+					<input type="file" name="fleMovie" />
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>片长：</td>
+				<td>
+					<input type="text" name="txtTime" size="3" maxlength="3" value="95"/>分钟
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>剧情简介：</td>
+				<td>
+					<textarea name="taeIntroduce" rows="8" cols="40"/>
+					　　香港某个国际伪钞集团重要分子宋子豪（狄龙 饰）和Mark（周润发 饰）情同手足，某次宋子豪带手下谭成（李子雄 饰）去台北交易时被其出卖受枪伤被捕入狱，为替好兄弟报仇，Mark孤身赴台，结果被人打成瘸子，江湖地位自此一落千丈，而宋子豪的父亲也在不久丧命。 一向视宋子豪为偶像的宋子杰（张国荣 饰）得知哥哥的真实身份后，对黑社会及他恨之入骨，立誓利用警察身份将黑帮势力斩草除根，宋子豪出狱后不顾苦等他想重创辉煌的Mark的劝阻，决心弃暗投明，无奈得不到宋子杰的谅解。而此时已成帮会老大的谭成欲找宋子豪再合作，遭拒绝后放言会害宋子杰，被逼走投无路，宋子豪决定再与Mark连手共抗强敌。
+					</textarea>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" name="btnSet" value="修改" />
+					<input type="reset" name="btnReset" value="重置" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	<hr>
+	<div align="center">
+		<br><br>
+		<font size="6" color="#FF6633" face="黑体">电视剧详情</font>
+		<br><br>
+	</div>
+	<form>
+		<table align="center">
+			<tr>
+				<td>片名：</td>
+				<td>
+					<input type="text" name="txtName" size="40" maxlength="40"/>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>导演：</td>
+				<td>
+					<input type="text" name="txtDirect" size="40" maxlength="40"/>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>编剧：</td>
+				<td>
+					<input type="text" name="txtScript" size="40" maxlength="40"/>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>主演：</td>
+				<td>
+					<input type="text" name="txtScript" size="40" maxlength="40"/>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>类型：</td>
+				<td>
+					<input type="checkbox" name="chkType" value="1"/>爱情
+					<input type="checkbox" name="chkType" value="2"/>喜剧
+					<input type="checkbox" name="chkType" value="3"/>科幻
+					<input type="checkbox" name="chkType" value="4"/>战争
+					<br>
+					<input type="checkbox" name="chkType" value="5"/>动作
+					<input type="checkbox" name="chkType" value="6"/>剧情
+					<input type="checkbox" name="chkType" value="7"/>恐怖
+					<input type="checkbox" name="chkType" value="8"/>悬疑		
+				</td>
+			</tr>
+			<tr>
+				<td>制片国家/地区：</td>
+				<td>
+					<input type="text" name="txtArea" size="20" 
+					maxlength="20"/><font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>语言：</td>
+				<td>
+					<input type="radio" name="rdoLanguage" value="1"/>普通话
+					<input type="radio" name="rdoLanguage" value="2"/>英语
+					<input type="radio" name="rdoLanguage" value="3"/>法语
+					<input type="radio" name="rdoLanguage" value="4"/>日语
+					<input type="radio" name="rdoLanguage" value="5"/>韩语
+					<input type="radio" name="rdoLanguage" value="6"/>粤语
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>上映日期：</td>
+				<td>
+					<input type="text" name="txtYear" size="4" maxlength="4"/>年
+					<input type="text" name="txtMonth" size="2" maxlength="2"/>月
+					<input type="text" name="txtDay" size="2" maxlength="2"/>日
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>上传图片：</td>
+				<td>
+					<input type="file" name="fleMovie" />
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>单集时长：</td>
+				<td>
+					<input type="text" name="txtTime" size="3" maxlength="3"/>分钟
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>集数：</td>
+				<td>
+					<input type="text" name="txtAmount" size="3" maxlength="3"/>集
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>剧情简介：</td>
+				<td>
+					<textarea name="taeIntroduce" rows="8" cols="40"/>
+					</textarea>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" name="btnAdd" value="添加" />
+					<input type="reset" name="btnReset" value="重置" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	<hr>
+	<div align="center">
+		<br><br>
+		<font size="6" color="#FF6633" face="黑体">综艺详情</font>
+		<br><br>
+	</div>
+	<form>
+		<table align="center">
+			<tr>
+				<td>片名：</td>
+				<td>
+					<input type="text" name="txtName" size="40" maxlength="40"/>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>导演：</td>
+				<td>
+					<input type="text" name="txtDirect" size="40" maxlength="40"/>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>编剧：</td>
+				<td>
+					<input type="text" name="txtScript" size="40" maxlength="40"/>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>主演：</td>
+				<td>
+					<input type="text" name="txtScript" size="40" maxlength="40"/>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>类型：</td>
+				<td>
+					<input type="checkbox" name="chkType" value="1"/>音乐
+					<input type="checkbox" name="chkType" value="2"/>真人秀
+					<input type="checkbox" name="chkType" value="3"/>亲子
+					<input type="checkbox" name="chkType" value="4"/>喜剧
+					<input type="checkbox" name="chkType" value="5"/>脱口秀
+					<br>
+					<input type="checkbox" name="chkType" value="6"/>选秀
+					<input type="checkbox" name="chkType" value="7"/>表演
+					<input type="checkbox" name="chkType" value="8"/>答题
+					<input type="checkbox" name="chkType" value="9"/>明星		
+				</td>
+			</tr>
+			<tr>
+				<td>制片国家/地区：</td>
+				<td>
+					<input type="text" name="txtArea" size="20" 
+					maxlength="20"/><font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>语言：</td>
+				<td>
+					<input type="radio" name="rdoLanguage" value="1"/>普通话
+					<input type="radio" name="rdoLanguage" value="2"/>英语
+					<input type="radio" name="rdoLanguage" value="3"/>法语
+					<input type="radio" name="rdoLanguage" value="4"/>日语
+					<input type="radio" name="rdoLanguage" value="5"/>韩语
+					<input type="radio" name="rdoLanguage" value="6"/>粤语
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>上映日期：</td>
+				<td>
+					<input type="text" name="txtYear" size="4" maxlength="4"/>年
+					<input type="text" name="txtMonth" size="2" maxlength="2"/>月
+					<input type="text" name="txtDay" size="2" maxlength="2"/>日
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>上传图片：</td>
+				<td>
+					<input type="file" name="fleMovie" />
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>单集时长：</td>
+				<td>
+					<input type="text" name="txtTime" size="3" maxlength="3"/>分钟
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>集数：</td>
+				<td>
+					<input type="text" name="txtAmount" size="3" maxlength="3"/>集
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>剧情简介：</td>
+				<td>
+					<textarea name="taeIntroduce" rows="8" cols="40"/>
+					</textarea>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" name="btnAdd" value="添加" />
+					<input type="reset" name="btnReset" value="重置" />
+				</td>
+			</tr>
+		</table>
+	</form>
+	<hr>
+	<div align="center">
+		<br><br>
+		<font size="6" color="#FF6633" face="黑体">动漫详情</font>
+		<br><br>
+	</div>
+	<form>
+		<table align="center">
+			<tr>
+				<td>片名：</td>
+				<td>
+					<input type="text" name="txtName" size="40" maxlength="40"/>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>导演：</td>
+				<td>
+					<input type="text" name="txtDirect" size="40" maxlength="40"/>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>编剧：</td>
+				<td>
+					<input type="text" name="txtScript" size="40" maxlength="40"/>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>主演：</td>
+				<td>
+					<input type="text" name="txtScript" size="40" maxlength="40"/>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>类型：</td>
+				<td>
+					<input type="checkbox" name="chkType" value="1"/>爱情
+					<input type="checkbox" name="chkType" value="2"/>喜剧
+					<input type="checkbox" name="chkType" value="3"/>科幻
+					<input type="checkbox" name="chkType" value="4"/>战争
+					<br>
+					<input type="checkbox" name="chkType" value="5"/>动作
+					<input type="checkbox" name="chkType" value="6"/>剧情
+					<input type="checkbox" name="chkType" value="7"/>恐怖
+					<input type="checkbox" name="chkType" value="8"/>悬疑		
+				</td>
+			</tr>
+			<tr>
+				<td>制片国家/地区：</td>
+				<td>
+					<input type="text" name="txtArea" size="20" 
+					maxlength="20"/><font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>语言：</td>
+				<td>
+					<input type="radio" name="rdoLanguage" value="1"/>普通话
+					<input type="radio" name="rdoLanguage" value="2"/>英语
+					<input type="radio" name="rdoLanguage" value="3"/>法语
+					<input type="radio" name="rdoLanguage" value="4"/>日语
+					<input type="radio" name="rdoLanguage" value="5"/>韩语
+					<input type="radio" name="rdoLanguage" value="6"/ checked="checked">粤语
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>上映日期：</td>
+				<td>
+					<input type="text" name="txtYear" size="4" maxlength="4"/>年
+					<input type="text" name="txtMonth" size="2" maxlength="2"/>月
+					<input type="text" name="txtDay" size="2" maxlength="2"/>日
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>上传图片：</td>
+				<td>
+					<input type="file" name="fleMovie" />
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>单集时长：</td>
+				<td>
+					<input type="text" name="txtTime" size="3" maxlength="3"/>分钟
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>集数：</td>
+				<td>
+					<input type="text" name="txtAmount" size="3" maxlength="3"/>集
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td>剧情简介：</td>
+				<td>
+					<textarea name="taeIntroduce" rows="8" cols="40"/>
+					</textarea>
+					<font color="red">*</font><br>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" name="btnSet" value="修改" />
+					<input type="reset" name="btnReset" value="重置" />
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

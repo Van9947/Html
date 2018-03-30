@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>主页</title>
+    <link href="css/picture.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="js/login.js"></script>
+	<script type="text/javascript" src="js/time.js"></script>
+	
+</head>
+<body onload="startTime()" background="img/背景.jpg">
+		<table align="center" width="1200">
+			<tr>
+				<td align="left">
+					<font size="7" color="#0099CC" face="黑体">辉哥的烦恼影视</font>
+				</td>
+				<td align="right">
+					帐号：<input type="text" name="txtUserName" size="15" maxlength="20">
+					<br>
+					密码：<input type="password" name="txtPwd" size="15" maxlength="20">
+					<br>
+					<input type="radio" name="rdoActor" value="0" >管理员
+					<input type="radio" name="rdoActor" value="1" >用户
+					<br>
+					<input type="submit" name="btnLogin" value="登录" onclick="Log()" >
+					<a href="login.html">
+						<input type="button" name="btnRegister" value="注册" onclick="login.html" >
+					</a>
+				</td>
+			</tr>
+		</table>
+		<hr>
+		<table align="center" width="1000" >
+			<tr>
+				<td>
+					<font size="6"><a href="index.html"  style="text-decoration:none">首页</a></font>
+				</td>
+				<td>
+					<font size="6"><a href="movie.html"  style="text-decoration:none">电影</a></font>
+				</td>
+				<td>
+					<font size="6"><a href="tvDrama.html"  style="text-decoration:none">电视剧</a></font>
+				</td>
+				<td>
+					<font size="6"><a href="tvShow.html"  style="text-decoration:none">综艺</a></font>
+				</td>
+				<td>
+					<font size="6"><a href="animation.html"  style="text-decoration:none">动漫</a></font>
+				</td>
+				<td>
+					<font size="6"><a href="billboard.html"  style="text-decoration:none">排行榜</a></font>
+				</td>
+				<td>
+					<input type="text" name="txtSel" size="15" maxlength="20">
+					<font size="3"><a href="information.html"  style="text-decoration:none">查询</a></font>
+				</td>
+				<td>
+					<font size="3"><a href="addInformation.html"  style="text-decoration:none">添加</a></font>
+				</td>
+				<td>
+					<font size="3"><a href="selectInformation.html"  style="text-decoration:none">删改</a></font>
+				</td>
+			</tr>
+		</table>
+		<hr>
+		<div align="center">
+		当前时间：<font color="#000000"><span id="nowDateTimeSpan"></span></font>	
+		</div>
+		<div>
+		<font color="#663300" size="+6">
+		今·
+		日·
+		上·
+		新
+		</font>	
+		</div>
+		<div  id="tab" >
+			<img src="img/英雄本色.jpg" width="400" />
+			<img src="img/缝纫机乐队.jpg" width="400"/>
+			<img src="img/熔炉.jpg" width="400" />
+		</div>
+	<table align="center" width="700">
+		<tr>
+			<td>
+				<ul>
+					<li><b><font size="6">最新电影</font></b></li>
+					<br>
+					<ul>
+						<li type="1"><font size="5"><a href="information.html" style="text-decoration:none">正义联盟</a></font></li>
+						<br>
+						<li type="1"><font size="5"><a href="information.html" style="text-decoration:none">英雄本色</a></font></li>
+						<br>
+						<li type="1"><font size="5"><a href="information.html" style="text-decoration:none">追捕</a></font></li>
+						<br>
+						<li type="1"><font size="5"><a href="information.html" style="text-decoration:none">寻梦环游记</a></font></li>
+						<br>
+						<li type="1"><font size="5"><a href="information.html" style="text-decoration:none">熔炉</a></font></li>
+						<br>
+						<li type="1"><font size="5"><a href="information.html" style="text-decoration:none">缝纫机乐队</a></font></li>
+					</ul>
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li><b><font size="6">最新电视剧</font></b></li>
+					<br>
+					<ul>
+						<li type="1"><font size="5"><a href="information.html" style="text-decoration:none">无耻之徒（第八季）</a></font></li>
+						<br>
+						<li type="1"><font size="5"><a href="information.html" style="text-decoration:none">请回答1988</a></font></li>
+						<br>
+						<li type="1"><font size="5"><a href="information.html" style="text-decoration:none">蓝色星球2</a></font></li>
+						<br>
+						<li type="1"><font size="5"><a href="information.html" style="text-decoration:none">***</a></font></li>
+						<br>
+						<li type="1"><font size="5"><a href="information.html" style="text-decoration:none">***</a></font></li>
+						<br>
+						<li type="1"><font size="5"><a href="information.html" style="text-decoration:none">***</a></font></li>
+					</ul>
+				</ul>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

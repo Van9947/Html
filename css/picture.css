@@ -1,0 +1,12 @@
+/* CSS Document */
+        #tab {
+			overflow: hidden;
+			width: 400px;
+
+			position: relative;
+			float: left;
+		}
+ 
+		#tab>img:not(:first-child) {
+   			 display: none;
+		}

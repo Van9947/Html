@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>查询作品</title>
+	<script type="text/javascript" src="js/delete.js"></script>
+	<script type="text/javascript" src="js/login.js"></script>
+	<script type="text/javascript" src="js/resert.js"></script>
+</head>
+<body background="img/背景.jpg">
+		<table align="center" width="1200">
+			<tr>
+				<td align="left">
+					<font size="7" color="#0099CC" face="黑体">辉哥的烦恼影视</font>
+				</td>
+				<td align="right">
+					帐号：<input type="text" name="txtUserName" size="15" maxlength="20" >
+					<br>
+					密码：<input type="password" name="txtPwd" size="15" maxlength="20">
+					<br>
+					<input type="radio" name="rdoActor" value="0" >管理员
+					<input type="radio" name="rdoActor" value="1" >用户
+					<br>
+					<input type="submit" name="btnLogin" value="登录" onclick="Log()" >
+					<a href="login.html">
+						<input type="button" name="btnRegister" value="注册" onclick="login.html" >
+					</a>
+				</td>
+			</tr>
+		</table>
+		<hr>
+		<table align="center" width="1000" >
+			<tr>
+				<td>
+					<font size="6"><a href="index.html"  style="text-decoration:none">首页</a></font>
+				</td>
+				<td>
+					<font size="6"><a href="movie.html"  style="text-decoration:none">电影</a></font>
+				</td>
+				<td>
+					<font size="6"><a href="tvDrama.html"  style="text-decoration:none">电视剧</a></font>
+				</td>
+				<td>
+					<font size="6"><a href="tvShow.html"  style="text-decoration:none">综艺</a></font>
+				</td>
+				<td>
+					<font size="6"><a href="animation.html"  style="text-decoration:none">动漫</a></font>
+				</td>
+				<td>
+					<font size="6"><a href="billboard.html"  style="text-decoration:none">排行榜</a></font>
+				</td>
+				<td>
+					<input type="text" name="txtSel" size="15" maxlength="20">
+					<font size="3"><a href="information.html"  style="text-decoration:none">查询</a></font>
+				</td>
+				<td>
+					<font size="3"><a href="addInformation.html"  style="text-decoration:none">添加</a></font>
+				</td>
+				<td>
+					<font size="3"><a href="selectInformation.html"  style="text-decoration:none">删改</a></font>
+				</td>
+			</tr>
+		</table>
+		<hr>
+	<div align="center">
+		<font size="6" color="#0099CC" face="黑体">辉哥的烦恼影视管理系统</font>
+		<br><br>
+		<font size="6" color="#FF6633" face="黑体">查询作品</font>
+		<br><br>
+	</div>
+	<form>
+		<table align="center">
+			<tr>
+				<td>片名：</td>
+				<td>
+					<input type="text" name="txtName" size="40" maxlength="40"/>
+				</td>
+			</tr>
+			<tr>
+				<td>导演：</td>
+				<td>
+					<input type="text" name="txtDirect" size="40" maxlength="40"/>
+				</td>
+			</tr>
+			<tr>
+				<td>编剧：</td>
+				<td>
+					<input type="text" name="txtScript" size="40" maxlength="40"/>
+				</td>
+			</tr>
+			<tr>
+				<td>主演：</td>
+				<td>
+					<input type="text" name="txtScript" size="40" maxlength="40"/>
+				</td>
+			</tr>
+			<tr>
+				<td>类型：</td>
+				<td>
+					<input type="checkbox" name="chkType" value="1"/>爱情
+					<input type="checkbox" name="chkType" value="2"/>喜剧
+					<input type="checkbox" name="chkType" value="3"/>科幻
+					<input type="checkbox" name="chkType" value="4"/>战争
+					<input type="checkbox" name="chkType" value="5"/>动作
+					<br>
+					<input type="checkbox" name="chkType" value="6"/>剧情
+					<input type="checkbox" name="chkType" value="7"/>恐怖
+					<input type="checkbox" name="chkType" value="8"/>动画
+					<input type="checkbox" name="chkType" value="9"/>悬疑		
+				</td>
+			</tr>
+			<tr>
+				<td>制片国家/地区：</td>
+				<td>
+					<input type="text" name="txtArea" size="20" 
+					maxlength="20"/>
+				</td>
+			</tr>
+			<tr>
+				<td>语言：</td>
+				<td>
+					<input type="radio" name="rdoLanguage" value="1"/>普通话
+					<input type="radio" name="rdoLanguage" value="2"/>英语
+					<input type="radio" name="rdoLanguage" value="3"/>法语
+					<input type="radio" name="rdoLanguage" value="4"/>日语
+					<input type="radio" name="rdoLanguage" value="5"/>韩语
+					<input type="radio" name="rdoLanguage" value="6"/>粤语
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" name="btnSelect" value="查询" />
+					<input type="reset" name="btnReset" value="重置" onclick="Res()" />
+				</td>
+			</tr>
+		</table>
+		<hr>
+	<div align="center">
+		<br>
+		<font size="6" color="#FF6633" face="黑体">查询结果</font>
+		<br><br>
+	</div>
+		<table border="1" align="center">
+			<tr>
+				<th>片名</th>
+				<th>导演</th>
+				<th>编剧</th>
+				<th>主演</th>
+				<th>类型</th>
+				<th>制片国家/地区</th>
+				<th>语言</th>
+				<th>上映日期</th>
+				<th>片长</th>
+				<th>图片</th>
+				<th>操作</th>
+			</tr>
+			<tr>
+				<td>英雄本色</td>
+				<td>吴宇森</td>
+				<td>陈庆嘉/吴宇森/梁淑华</td>
+				<td>周润发/狄龙/张国荣</td>
+				<td>动作</td>
+				<td>香港</td>
+				<td>粤语</td>
+				<td>1986-08-02(香港)</td>
+				<td>95分钟</td>
+				<td><img src="img/英雄本色.jpg" width="80"></td>
+				<td>
+					<a href="information.html" style="text-decoration:none">
+						<input type="button" name="btnInf" value="查看详情" onclick="information.html" >
+					</a>
+					<a href="setInformation.html" style="text-decoration:none">
+						<input type="button" name="btnSet" value="修改" onclick="setInformation.html" >
+					</a>
+					<a href="selectInformation.html" style="text-decoration:none">
+						<input type="button" name="btnDel" value="删除" onclick="Del()" >
+					</a>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<div align="center">
+				<a href="addInformation.html">
+					<input type="button" name="btnAdd" value="添加作品" onclick="addInformation.html" >
+				</a>
+		</div>
+	</form>
+</body>
+</html>
